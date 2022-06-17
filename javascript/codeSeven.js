@@ -22,7 +22,7 @@ function getCount(str){
 
 //The above method is if we want to break it down. below for a bit dryer
 function getCount(str){
-    return (str.match(/[aeiou]/ig)|| [].length
+    return (str.match(/[aeiou]/ig)|| [].length)
 }
 //	Explanation: For anyone curious about what the "ig" portion of the .match argument does (as I was), it turns out "i" and "g" are both one of five optional "flags" that can be used in connection with regular expressions. The "g" makes it so the regex search is global (i.e., all matches in a string are returned, as opposed to a single match) and the "i" makes it so the search is case-insensitive.
 //
