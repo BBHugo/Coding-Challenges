@@ -22,4 +22,6 @@ function isValidWalk(walk) {
     }
   }
 
+
+  // A better method would be to add the conditional in the beginning to check if walk.length == 10 to return false first just in case.
   
