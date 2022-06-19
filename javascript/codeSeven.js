@@ -76,3 +76,6 @@ function friend(friends){
     })
     return fourFriends
 }
+
+//The below is code to help us turn an array of binary to decimal
+const binaryArrayToNumber = arr => parseInt(arr.join(''), 2) // We have to first join the array within the parseInt parameter.
