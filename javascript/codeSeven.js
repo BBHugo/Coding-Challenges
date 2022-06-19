@@ -20,11 +20,11 @@ function getCount(str){
     return vowelsCount
 }
 
-//The above method is if we want to break it down. below for a bit dryer
+    //The above method is if we want to break it down. below for a bit dryer
 function getCount(str){
     return (str.match(/[aeiou]/ig)|| [].length)
 }
-//	Explanation: For anyone curious about what the "ig" portion of the .match argument does (as I was), it turns out "i" and "g" are both one of five optional "flags" that can be used in connection with regular expressions. The "g" makes it so the regex search is global (i.e., all matches in a string are returned, as opposed to a single match) and the "i" makes it so the search is case-insensitive.
+    //	Explanation: For anyone curious about what the "ig" portion of the .match argument does (as I was), it turns out "i" and "g" are both one of five optional "flags" that can be used in connection with regular expressions. The "g" makes it so the regex search is global (i.e., all matches in a string are returned, as opposed to a single match) and the "i" makes it so the search is case-insensitive.
 //
 
 
@@ -48,4 +48,31 @@ function number(array){
     })
 }
 
-//Used the map method to create a function that imitated method 1 code by adding all of the end result together but it didn't require the first vairable. using line as the x and index as i respectively
+    //Used the map method to create a function that imitated method 1 code by adding all of the end result together but it didn't require the first vairable. using line as the x and index as i respectively
+
+//An example of using the typeof syntax in a conditional to determine if an element in an array is a string
+function filter_list(l) {
+    let nums = []
+    l.forEach((x,i) => {
+      if( typeof x != 'string'){ //In this case, String isn't a random variable and actually needs to say 'string'
+        nums.push(x)
+        }
+      })
+    return nums
+   }
+
+//A useful way to filter out an array to only include the things we want, in this case we are looking for strings that are exactly 4 in length.
+function friend(friends){
+    return friends.filter(n => n.length === 4)
+  }
+
+  //Essentially, it does the same as the code below
+function friend(friends){
+    let fourFriends = []
+    friends.forEach( x => {
+        if( x.length == 4){
+            fourFriends.push(x)
+        }
+    })
+    return fourFriends
+}
