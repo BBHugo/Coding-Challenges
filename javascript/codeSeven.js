@@ -79,3 +79,10 @@ function friend(friends){
 
 //The below is code to help us turn an array of binary to decimal
 const binaryArrayToNumber = arr => parseInt(arr.join(''), 2) // We have to first join the array within the parseInt parameter.
+
+//The below code is useful for finding characteristics within a string using the .match method
+function XO(str) {
+    let x = str.match(/x/gi);
+    let o = str.match(/o/gi);
+    return (x && x.length) === (o && o.length); //the lone x & o variables are used to check for nulls which is prevalent with .matches
+  }
