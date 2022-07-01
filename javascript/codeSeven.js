@@ -86,3 +86,5 @@ function XO(str) {
     let o = str.match(/o/gi);
     return (x && x.length) === (o && o.length); //the lone x & o variables are used to check for nulls which is prevalent with .matches
   }
+  //A problem I had before was, if we try to do the .length into to the original variable, null will prevent our .length from reading. So adding the o & x variables to the conditional works great
+  
