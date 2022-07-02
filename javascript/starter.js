@@ -18,3 +18,7 @@ function replace(s){
     return s.replace(/[aeoiu]/ig, '!')  
   }
   //the g means global to replace more than just the first find in the string, and the i is for case sensitivity
+
+//A ternary example to use later on, this one returns health - damage, but can't fall below 0
+const combat = (health,damage) =>  health - damage > 0 ? health - damage : 0
+  //Tried it with curly braces following the arrow but didn't work. Works this way though.
