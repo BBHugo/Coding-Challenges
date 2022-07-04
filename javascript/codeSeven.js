@@ -88,3 +88,20 @@ function XO(str) {
   }
   //A problem I had before was, if we try to do the .length into to the original variable, null will prevent our .length from reading. So adding the o & x variables to the conditional works great
   
+// The below code is just an example of using switches instead of a regular if conditional.
+function arithmetic(a,b, operator){
+    switch (operator){
+        case "add":
+          return a + b
+          break
+        case "subtract":
+          return a - b
+          break
+        case "multiply":
+          return a * b
+          break
+        default:
+          return a / b
+    }
+  }
+  //May need to add a ; in between each line but it works this way too.
