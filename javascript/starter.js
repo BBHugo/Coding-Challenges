@@ -28,3 +28,6 @@ const combat = (health,damage) =>  health - damage > 0 ? health - damage : 0
 function shortcut(string){
   return string.replace(/[aeiou]/g,'')
 }
+
+//A simple method to reverse a string
+let solution = (str) => str.split("").reverse().join("")
