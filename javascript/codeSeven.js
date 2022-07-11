@@ -105,3 +105,21 @@ function arithmetic(a,b, operator){
     }
   }
   //May need to add a ; in between each line but it works this way too.
+
+//The below is used to sort an array of numbers from smallest to largest, if the array.length == 0 or is null then we return an empty array.
+    //This one will be a longer version to help readability of what's happening.
+function sortArray(nums){
+    if(nums === null || nums.lenght === 0){
+        return []
+    }else{
+        return nums.sort(function(a,b){return a-b})
+    }
+}
+    //The next one will be a dryer version
+function sortArry(nums){
+    return (nums || []).sort(function(a,b){
+        return a - b
+    })
+}
+    //To go largest to smallest, we just need to have b - a.
+    //The dryer version just has nums as a boolean for the conditional with an empty string still being able to have the sort function ran through it but returning it empty regardless
