@@ -123,3 +123,9 @@ function sortArry(nums){
 }
     //To go largest to smallest, we just need to have b - a.
     //The dryer version just has nums as a boolean for the conditional with an empty string still being able to have the sort function ran through it but returning it empty regardless
+
+
+// The below code is for making a given string with a proper format into a date and comparing it to another
+function checkDate(currentDate, expirationDate){
+    return  new Date(currentDate) <= new Date(expirationDate);
+  }
