@@ -1,0 +1,56 @@
+:root {
+    --main-color: orange;
+    --main-ff: 'Roboto Mono', monospace;
+    --fw-light: 300;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+
+    --fs-475: .75rem;
+    --fs-500: 1rem;
+    --fs-550: 1.5rem;
+    --fs-600: 2rem;
+}
+
+html {
+    background: var(--main-color);
+    border: 1px solid black;
+}
+
+h1 {
+    font-family: var(--main-ff);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-600);
+}
+
+p{
+    font-size: var(--fs-550);
+    font-weight: var(--fw-light);
+}
+
+a[data-tool-tip] {
+    position: relative;
+}
+
+a[data-tool-tip]::after {
+    content: attr(data-tool-tip);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: 1em 3em;
+    border-radius: 5px;
+    background: gray;
+    font-size: var(--fs-500);
+    color: white;
+    white-space: nowrap;
+    transform: scale(0);
+    transition: transform ease-out 150ms,
+        bottom ease-out 150ms;
+}
+
+a[data-tool-tip]:hover::after{
+    transform: scale(1);
+    bottom: 100%;
+}
