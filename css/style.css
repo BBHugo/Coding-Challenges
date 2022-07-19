@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --main-color: orange;
     --main-ff: 'Roboto Mono', monospace;
     --fw-light: 300;
@@ -9,9 +9,16 @@
     --fs-500: 1rem;
     --fs-550: 1.5rem;
     --fs-600: 2rem;
+}*/
+
+body {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.4;
+
 }
 
-html {
+/*html {
     background: var(--main-color);
     border: 1px solid black;
 }
@@ -25,6 +32,7 @@ h1 {
 p{
     font-size: var(--fs-550);
     font-weight: var(--fw-light);
+    margin-top: .25em;
 }
 
 a[data-tool-tip] {
@@ -51,6 +59,32 @@ a[data-tool-tip]::after {
 }
 
 a[data-tool-tip]:hover::after{
+    transform: scale(1);
+    bottom: 100%;
+} */
+
+div > a {
+    position: relative;
+}
+
+div > a::after{
+    padding: .5em 1em;
+    background: gray;
+    content: 'Nothing';
+    display: block;
+    position: absolute;
+    transform: scale(0);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: green;
+    transition: transform ease-out 150ms,
+    bottom ease-out 150ms;
+    border-radius: 5px;
+    width: 30px;
+}
+
+div > a:hover::after{
     transform: scale(1);
     bottom: 100%;
 }
