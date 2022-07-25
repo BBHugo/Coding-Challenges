@@ -25,3 +25,20 @@ function isValidWalk(walk) {
 
   // A better method would be to add the conditional in the beginning to check if walk.length == 10 to return false first just in case.
   
+//below is code for conditionals to give a response depending on the number of arrays. We craft the result desired by adding the requirements in between the element variables.
+
+function likes(names){
+  if(names.length == 0){
+    return 'no one likes this'
+  }else if(names.length == 1){
+    return names[0] + ' likes this'
+  }else if (names.length == 2){
+    return names[0] + ' and ' + names[1] + ' like this'
+  }else if (names.length == 3){
+    return names[0] + ', ' + names[1] + ' and ' + names[2] + ' like this'
+  }else if (names.length > 3){
+    return names[0] + ', ' + names [1] + ' and ' + (names.length - 2) + ' others like this'
+  }
+}
+
+ //The one below will be the same output of code, however done in switch conditionals instead.
