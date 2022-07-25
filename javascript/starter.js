@@ -22,3 +22,12 @@ function replace(s){
 //A ternary example to use later on, this one returns health - damage, but can't fall below 0
 const combat = (health,damage) =>  health - damage > 0 ? health - damage : 0
   //Tried it with curly braces following the arrow but didn't work. Works this way though.
+
+
+//A simple way to remove vowels (or any character) from a string using the replace method
+function shortcut(string){
+  return string.replace(/[aeiou]/g,'')
+}
+
+//A simple method to reverse a string
+let solution = (str) => str.split("").reverse().join("")
