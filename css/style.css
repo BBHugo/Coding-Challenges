@@ -1,4 +1,4 @@
-/* :root {
+:root {
     --main-color: orange;
     --main-ff: 'Roboto Mono', monospace;
     --fw-light: 300;
@@ -9,7 +9,7 @@
     --fs-500: 1rem;
     --fs-550: 1.5rem;
     --fs-600: 2rem;
-}*/
+}
 
 body {
     text-align: center;
@@ -18,7 +18,7 @@ body {
 
 }
 
-/*html {
+html {
     background: var(--main-color);
     border: 1px solid black;
 }
@@ -45,8 +45,6 @@ a[data-tool-tip]::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    top: 0;
-    right: 0;
     padding: 1em 3em;
     border-radius: 5px;
     background: gray;
@@ -61,7 +59,7 @@ a[data-tool-tip]::after {
 a[data-tool-tip]:hover::after{
     transform: scale(1);
     bottom: 100%;
-} */
+}
 
 div > a {
     position: relative;
@@ -76,12 +74,10 @@ div > a::after{
     transform: scale(0);
     bottom: 0;
     left: 0;
-    right: 0;
     color: green;
     transition: transform ease-out 150ms,
     bottom ease-out 150ms;
     border-radius: 5px;
-    width: 30px;
 }
 
 div > a:hover::after{

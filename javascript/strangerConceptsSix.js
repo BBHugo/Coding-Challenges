@@ -25,3 +25,28 @@ function isValidWalk(walk) {
 
   // A better method would be to add the conditional in the beginning to check if walk.length == 10 to return false first just in case.
   
+
+  //The below is a good example on how to execute the function depending on how many times you want it to be done with each new iteration being done from the previous result
+  function encrypt(text, n) {
+    let oddString = ''
+    let evenString = ''
+    
+    const formula = text.split('').forEach((x,i) => {
+      if(i % 2 === 0 ){
+        evenString += x
+      }else {
+        oddString += x
+      }
+    })
+    formula * n
+  //   let result1 = oddString + evenString
+  //   for(let p = 1; p < n; p++){
+  //     result += (oddString + evenString)
+  //   }
+    if(n <= 0 || !text || !text.length){ //find out if !text and !text.length do anything, trying to figure out final requirement
+      return text
+    }else{
+      return encrypt(oddString + evenString, --n) //Here we have a --n which i'm not entirely sure what it does, but running the function seems to work with the results given of the scope. The --n was added so it could run n amount of times.
+    }
+  }
+  
