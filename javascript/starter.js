@@ -29,5 +29,13 @@ function shortcut(string){
   return string.replace(/[aeiou]/g,'')
 }
 
+  //If we wish to make it case sensitive, we'll have to add the cap vowels like so:
+  function disemvowel(str) {
+    return str.replace(/[aeiouAEIOU]/g,'')
+  } //However this will only work appropriately for lower requirements. For a universal tool we'll use the regEx of "gi" instead of just "g".
+  function disemvowel(str) {
+    return str.replace(/[aeiou]/gi,'')
+  }
+
 //A simple method to reverse a string
 let solution = (str) => str.split("").reverse().join("")
