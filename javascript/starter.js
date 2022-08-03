@@ -39,3 +39,9 @@ function shortcut(string){
 
 //A simple method to reverse a string
 let solution = (str) => str.split("").reverse().join("")
+
+//An example of the reduce method used with ternary and arrow functions, if the array given is empty (numbers) then we will return 0
+let sum = numbers => numbers.length ? numbers.reduce((acc,c) => acc + c ) : 0
+  //This could be further broken down to just have the return of the reduce method without having to add the ternary:
+  let sum2 = numbers => numbers.reduce((acc,c) => acc + c,0)
+  //The 0 is placed as the starting point of our reduce. This will make it so that we start at 0 and since there's nothing else to add, it'll stay at 0 just as we wanted
