@@ -50,3 +50,21 @@ function isValidWalk(walk) {
     }
   }
   
+//The below example is a good exercise in finding the only array that is different amongst all other arrays that are the same as each other with atleast 3 elements given.
+function findUniq(arr) {
+  let result = 0
+  arr.forEach((x,i) => {
+    if(arr[i] === arr[i-1] || arr[i] === arr[i+1] || arr[i] === arr[i+2] || arr[i] === arr[i-2]){ //This will just return a 0 if it matches with the 2 above or below in the array
+      result += 0
+    }else{
+      result += x //This will only return 1 number to result
+    }
+  })
+    return result
+}
+
+  //this one takes the above one but instead breaks it down by sorting the numbers in order (Note the method to use sort to organize numbers)
+  function findUniq(arr) {
+    arr.sort((a,b)=>a-b); //Sort numbers like this
+    return arr[0]==arr[1]?arr.pop():arr[0] //Once sorted, it'll return the first number if it doesn't match, but if it does, arr.pop() will remove the last element of an array and return it, giving us the answer without the very long block as before
+  }
