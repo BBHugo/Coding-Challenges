@@ -48,3 +48,6 @@ let sum = numbers => numbers.length ? numbers.reduce((acc,c) => acc + c ) : 0
 
 //Incredibly simple arrow function that uses floor to round down any number times .5
 let litres = time => Math.floor(time * .5)
+ //Math.ceil will round up Ex:
+ let litres2 = time => Math.ceil(time * .5)
+ //This will now return rounded up
