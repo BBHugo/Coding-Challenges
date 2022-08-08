@@ -68,3 +68,17 @@ function findUniq(arr) {
     arr.sort((a,b)=>a-b); //Sort numbers like this
     return arr[0]==arr[1]?arr.pop():arr[0] //Once sorted, it'll return the first number if it doesn't match, but if it does, arr.pop() will remove the last element of an array and return it, giving us the answer without the very long block as before
   }
+
+  //This is another example with the split and forEach methods to output. The function of this block is to split up camelCase string by putting a space in front of the Capitalized letter, I use conditionals with the boolean using .toUpperCase() within the forEach. However, we can refactor this using Regex which will be the following.
+  function solution(string) {
+    let result = ''
+    string.split('').forEach( x =>{
+       x === x.toUpperCase() ? result += ( " " + x ) : result += x
+    })
+    return result
+  }
+
+    //This will be the refactored of above using RegEx
+    function solution(string) {
+      return(string.replace(/([A-Z])/g, ' $1'));
+    }
