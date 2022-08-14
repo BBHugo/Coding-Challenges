@@ -51,3 +51,9 @@ let litres = time => Math.floor(time * .5)
  //Math.ceil will round up Ex:
  let litres2 = time => Math.ceil(time * .5)
  //This will now return rounded up
+
+ //Simple function using math with the Math.floor to return how many one times another would go into the third parameter
+ function dutyFree(normPrice, discount, hol){
+  let percentage = normPrice * .01
+  return Math.floor(hol / (discount * percentage)) 
+}
