@@ -129,3 +129,13 @@ function sortArry(nums){
 function checkDate(currentDate, expirationDate){
     return  new Date(currentDate) <= new Date(expirationDate);
   }
+
+//The below code uses the sort method and passed through function to sort the array elements by the length of their strings
+  //From shortest to longest we use
+  function sortByLength (array) {
+    return array.sort((a,b) => a.length - b.length)
+  };
+  //From longets to shortest we switch up the a & b parameters within the .sort method
+  function sortByLength (array) {
+    return array.sort((a,b) => b.length - a.length)
+  };
