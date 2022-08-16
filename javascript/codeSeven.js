@@ -139,3 +139,9 @@ function checkDate(currentDate, expirationDate){
   function sortByLength (array) {
     return array.sort((a,b) => b.length - a.length)
   };
+
+//Below is a smart way to use the .split() method to separate a string by an anything within a string and returning everything before it. This strings purpose is to return everything before '#' and remove everything after. example: www.helloWorld.com/KeepMe#removeme -> www.helloWorld.com/KeepMe
+function removeUrlAnchor(url){
+    return url.split('#')[0];
+  }
+  //Since we've split the array wherever the # appears, essentially (with the example provided) will create 2 indexes, all we have to do to return our wanted element is to recall index 0. Simple.
