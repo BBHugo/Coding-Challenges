@@ -57,3 +57,16 @@ let litres = time => Math.floor(time * .5)
   let percentage = normPrice * .01
   return Math.floor(hol / (discount * percentage)) 
 }
+
+//Below is a function which has the includes method to find if the given array (first param) contains the second parameter anywhere in there.
+function include(arr,item){
+  if(arr.includes(item)){
+    return true
+  }else{
+    return false
+  }
+}
+  //This can easily be dryer using arrow functions and ternary conditionals
+    let include = (arr, item) => arr.includes(item) ? true : false
+  //It can be even drier than that where it doesn't include the ternary and just has the return have the result
+    let include = (arr, item) => arr.includes(item)
