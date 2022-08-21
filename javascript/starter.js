@@ -37,7 +37,7 @@ function shortcut(string){
     return str.replace(/[aeiou]/gi,'')
   }
 
-//A simple method to reverse a string
+//A simple method to reverse a string. Note that this will be useful to check for palindromes.
 let solution = (str) => str.split("").reverse().join("")
 
 //An example of the reduce method used with ternary and arrow functions, if the array given is empty (numbers) then we will return 0
@@ -76,3 +76,13 @@ function sayHello(name) {
   return `Hello, ${name}`
 }
   //This will allow us to use the inserted param to create a customizable string using ${}
+
+//This will be an example to find a palindrome (Text that is the same forwards and backwards) as well as palindrome numbers which will first have to be transformed into strings before reversing using the toString method
+function isPalindrome(line) {
+  if(line.toString().split("").reverse().join("") == line){
+    return true
+  }else{
+    return false
+  }
+}
+//line will be the inserted param that we wish to check for.
