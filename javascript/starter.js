@@ -70,3 +70,9 @@ function include(arr,item){
     let include = (arr, item) => arr.includes(item) ? true : false
   //It can be even drier than that where it doesn't include the ternary and just has the return have the result
     let include = (arr, item) => arr.includes(item)
+
+//Quick example of Template Literals using the backticks:
+function sayHello(name) {
+  return `Hello, ${name}`
+}
+  //This will allow us to use the inserted param to create a customizable string using ${}
