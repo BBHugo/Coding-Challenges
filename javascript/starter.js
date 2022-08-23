@@ -95,3 +95,5 @@ function remove (string) {
     return string
   }
 }
+  //Pretty neat method using the .replace method
+  const remove = s => s.replace(/!$/, '') //This will replace the !, however the $ says to do it from the end. (Instead of start or all) and replace it with nothing. ('')
