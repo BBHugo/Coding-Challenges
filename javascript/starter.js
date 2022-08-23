@@ -85,4 +85,13 @@ function isPalindrome(line) {
     return false
   }
 }
-//line will be the inserted param that we wish to check for.
+  //line will be the inserted param that we wish to check for.
+
+//The below code is an exercise that allows us to remove the last character of a string only if it means a condition (In this case it must be an exclamation mark), if not, it'll return the string in tact. This uses the slice method
+function remove (string) {
+  if(string[string.length - 1] === "!"){ //We use [str.length -1] to get target the last character of this string, if it equals "!" then continue
+      return string.slice(0,-1) //the -1 in .slice is the second param and targets all characters to be removed past a point, if it were a -2, it would remove the exclamation plus the next character and so on. the 0 is from the start, but we aren't removing anything with 0
+  }else{
+    return string
+  }
+}
