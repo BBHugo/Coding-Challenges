@@ -97,3 +97,14 @@ function remove (string) {
 }
   //Pretty neat method using the .replace method
   const remove = s => s.replace(/!$/, '') //This will replace the !, however the $ says to do it from the end. (Instead of start or all) and replace it with nothing. ('')
+
+//A simple equation to get the multiples of parameter 1 (integer) up until the parameter 2 (limit)
+function findMultiples(integer, limit) {
+  let result = []
+  for(let i = 1; i <= limit; i++){
+    if(integer * i <= limit){
+      result.push(integer * i)
+    }
+  }
+  return result
+}
