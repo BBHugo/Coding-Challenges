@@ -113,7 +113,7 @@ function findMultiples(integer, limit) {
   function findMultiples(int,limit){
     let result = []
     
-    for (let i = int; i<=limit ; i+=int)
+    for (let i = int; i<=limit ; i+=int) //Instead of the i++, we use i+=int so as to not keep adding more than we need.
       result.push(i)
       
     return result
