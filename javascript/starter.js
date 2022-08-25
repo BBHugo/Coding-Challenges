@@ -118,3 +118,18 @@ function findMultiples(integer, limit) {
       
     return result
   }
+
+//A simple way to get however many of an array (parameter 1) we want to show dependent on Parameter 2. Using .push
+function take(arr, n) {
+  let newArr = []
+  arr.forEach((x,i) =>{
+    if(i < n){
+      newArr.push(x)
+    }
+  })
+  return newArr
+}
+  //Here's that same code using .slice
+  function take(arr, n) {
+    return arr.slice(0, n);
+  }
