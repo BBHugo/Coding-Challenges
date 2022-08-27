@@ -134,5 +134,25 @@ function take(arr, n) {
     return arr.slice(0, n);
   }
 
-//This code appear simple, and it is.. But it also allows us to see that we can combine the || and && to add another level of conditional. The parameters both pass either true or false, and only one of them can be true for the requirements to work, if both are true then it fails. This was broken down into the most driest one line code, ternary and arrow with the params equalling the results.
+//This code appear simple, and it is.. But it also allows us to see that we can combine the || and && to add another level of conditional(xor). The parameters both pass either true or false, and only one of them can be true for the requirements to work, if both are true then it fails. This was broken down into the most driest one line code, ternary and arrow with the params equalling the results.
 let xor = (a, b) => a && !b || !a && b //Notice how we put the "!" in front of the param to say one of them had to be false (Since the result was going to be either true or false)
+
+//Some simple things with array just in case they're needed
+let getLength = arr => arr.length //Return array length
+
+
+let getFirst = arr => arr[0] //Return first element of array
+
+let getLast = arr => arr[arr.length -1]  //return the last element of arr
+
+
+let pushElement = arr =>{ //Add el to the end of the array
+  let el = 1
+  arr.push(el)
+  return arr
+}
+
+let popElement = arr => {
+  arr.pop() //Remove the last element of the array
+  return arr
+}
