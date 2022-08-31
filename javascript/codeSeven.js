@@ -145,3 +145,15 @@ function removeUrlAnchor(url){
     return url.split('#')[0];
   }
   //Since we've split the array wherever the # appears, essentially (with the example provided) will create 2 indexes, all we have to do to return our wanted element is to recall index 0. Simple.
+
+//This code will allow a unique type of method to find if a string contains any letters before and including m.
+function printerError(s) {
+    // your code
+    var count = 0;
+    for(var i = 0; i < s.length; i++) {
+      if (s[i] > "m") { //Notice the greater tahn to find if true
+        count++;
+      }
+    }
+    return count+"/"+s.length;
+}
