@@ -82,3 +82,13 @@ function findUniq(arr) {
     function solution(string) {
       return(string.replace(/([A-Z])/g, ' $1'));
     }
+
+//The goal of this is to return ONLY the domain name and remove the https or any varients of it and anything after the domain
+function domainName(url){
+  url = url.replace("https://", '');
+  url = url.replace("http://", '');
+  url = url.replace("www.", '');
+  return url.split('.')[0];
+};
+
+  //What this does is ruse the replace to remove any of those by subsequently removing another thing if the url has it. Eventually returning the domain by splitting it at the first period and returning the first element of the split
