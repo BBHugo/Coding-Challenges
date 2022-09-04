@@ -157,3 +157,8 @@ function printerError(s) {
     }
     return count+"/"+s.length;
 }
+
+//New method to give us a single boolean result if each element passes the condition. Using the .every method, looks similar to .forEach
+function smallEnough(a, limit){
+    return a.every(x => x <= limit);
+  }
