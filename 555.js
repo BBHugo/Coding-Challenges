@@ -1,6 +1,6 @@
 //This code allows us to get the 13th letter in the alphabet (loops around) after an initial index and replace a string with the 13th. I use 2 variable to give me the original alphabet and the 13th to pull the index of both and return it for the replacement using RegEx to look through the given original input (the original function parameter not the replace parameter)
 function rot13(message){
-    let alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    let other = 'nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM'
-    return message.replace(/[a-z]/gi, parameter => other[alphabet.indexOf(parameter)])
+    let alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' //Original alphabet
+    let other = 'nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM' //13 letters following Alphabet
+    return message.replace(/[a-z]/gi, replacement => other[alphabet.indexOf(replacement)]) //We'll use replace. The Regex is looking through the 'message' parameter. The replacement will be following the comma which is a function. The replacement will be what we will replace the letter in the string with which acts as the parameter in the arrow function. we'll be trying to find the index of other to get the letter on that index in the other variable to be able to feed into the replacement parameter which will be passed to from indexOf
   }
