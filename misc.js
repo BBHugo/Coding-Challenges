@@ -28,4 +28,21 @@ fetch("https://dog.ceo/api/breeds/image/random")
     .catch(err => {
         console.log(`error ${err}`)
     });
+    //We can now use the async await syntax so make this asynchronous
+    async function getACuteDogPhoto(){
+        const res = await fetch('https://dog.ceo/api/breeds/image/random')
+        const data = await res.json()
+        console.log(data)
+    }
+    getACuteDogPhoto()
 
+//Async Await example
+async function getPaid(){
+    const houseOneWait = await houseOne()
+    const houseTwoWait = await houseTwo()
+    const houseThreeWait = await houseThree()
+    console.log(houseOneWait)
+    console.log(houseTwoWait)
+    console.log(houseThreeWait)
+}
+getPaid()
