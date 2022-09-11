@@ -156,3 +156,8 @@ let popElement = arr => {
   arr.pop() //Remove the last element of the array
   return arr
 }
+
+//The following will help us get the average of a given array (The parameter) using the reduce method. It divides the result of the reduction and divides it by the length of the array
+var findAverage = function (nums) {
+  return nums.reduce((acc,c) => c + acc) / nums.length
+}
