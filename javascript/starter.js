@@ -161,3 +161,9 @@ let popElement = arr => {
 var findAverage = function (nums) {
   return nums.reduce((acc,c) => c + acc) / nums.length
 }
+
+//The below function just turns the given parameter of binary string into a base ten digit
+function binToDec(bin){
+  return parseInt(bin,2)
+}
+  //The in the parseInt says what the first parseInt parameter is. Binary is a base 2.
