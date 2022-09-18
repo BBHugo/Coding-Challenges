@@ -167,3 +167,21 @@ function binToDec(bin){
   return parseInt(bin,2)
 }
   //The in the parseInt says what the first parseInt parameter is. Binary is a base 2.
+
+//Function including the "typeof" application which will return the type of the following. Good for a boolean to check try to match it with a given word.
+  //console.log(typeof ""); // 👉️ "string"
+  // console.log(typeof "42"); // 👉️ "string"
+  // console.log(typeof function () {}); // 👉️ "function"
+  // console.log(typeof null); // 👉️ "object"
+  // console.log(typeof []); // 👉️ "object"
+  // console.log(typeof {}); // 👉️ "object"
+  // console.log(typeof 0); // 👉️ "number"
+  // console.log(typeof "hello"); // 👉️ "string"
+  //The string below puts it into effect, if the typeof matches with 'string' then it'll return an error result, if not it'll return arithmetic
+  function problem(x){
+    if(typeof x === "string"){ //Notice how typeof has NO caps and we have to match it with the appropriate response that type of will give us to make it a boolean.
+      return "Error"
+    }else{
+      return (x * 50) + 6
+    }
+  }
