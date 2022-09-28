@@ -185,3 +185,11 @@ function binToDec(bin){
       return (x * 50) + 6
     }
   }
+
+//The below function provides an example on how to withdraw specific information from an object
+//The object is passed through the function's parameter and given the (Other than)method of color:, name:, legs:
+//We use back ticks to insert it into a sentence
+function animal(obj){
+  return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
+}
+
