@@ -193,3 +193,9 @@ function animal(obj){
   return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
 }
 
+
+
+//The below code creates a class called "Ball" which will return the given parameter in ballType (using "this.") if no parameter is given then it gives regular as the default option.
+var Ball = function(ballType) {
+  this.ballType = ballType || 'regular';
+};
