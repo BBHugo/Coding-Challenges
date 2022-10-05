@@ -172,3 +172,8 @@ function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
   })
   return Math.floor(Math.sqrt(arrayM.reduce((acc,c) => acc + c))/2)
 }
+  //To break it down even further, we'll take the return and break it down. to use the square root method. The rounding down "floor" method, and reduce, all in subsequent steps
+  let addedTogether = arrayM.reduce((acc,c) => acc + c) //Adds all the numbers in the array together to give one resulting number
+  let Rooted = Math.sqrt(addedTogether) //Square roots the added number
+  let roundedDown = Math.floor(Rooted) //Round down
+  //All we would have to do is divide by 2
