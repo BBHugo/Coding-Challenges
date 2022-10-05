@@ -162,3 +162,13 @@ function printerError(s) {
 function smallEnough(a, limit){
     return a.every(x => x <= limit);
   }
+
+//The following code will input several parameters. The goal is to get a result which first multiples each parameter times itself, adds all of them together, square roots it, divides it by two and gives the result rounded down to the nearest integer
+function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
+  let array = [age1,age2,age3,age4,age5,age6,age7,age8]
+  let arrayM = []
+  array.forEach((x,i) => {
+    arrayM.push(x*x)
+  })
+  return Math.floor(Math.sqrt(arrayM.reduce((acc,c) => acc + c))/2)
+}
