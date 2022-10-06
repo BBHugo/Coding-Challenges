@@ -177,3 +177,25 @@ function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
   let Rooted = Math.sqrt(addedTogether) //Square roots the added number
   let roundedDown = Math.floor(Rooted) //Round down
   //All we would have to do is divide by 2
+
+//Below is another example for using the switch as a conditional instead of the if method
+function DNAStrand(dna){
+  let result = ""
+  dna.split("").forEach((x,i) => {
+    switch(x){
+      case "A":
+        result += "T"
+        break
+      case "T":
+        result += "A"
+        break
+      case "C":
+        result += "G"
+        break
+      case "G":
+        result += "C"
+        break
+    }
+  })
+  return result
+}
