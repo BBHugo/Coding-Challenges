@@ -199,3 +199,28 @@ function DNAStrand(dna){
   })
   return result
 }
+
+//The below code capitalizes every other word of a string, first for even indexes then for the odd ones and creates a separate string with them, then it puts those individually into an array using the push method of the results
+function capitalize(s){
+  let resultEven = ''
+  let resultOdd = ''
+  let result = []
+  let array = s.split('')
+  array.forEach((x,i) => {
+    if(i % 2 === 0){
+      resultEven += x.toUpperCase()
+    }else{
+      resultEven += x
+    }
+  })
+  array.forEach((x,i) => {
+    if(i % 2 != 0){
+      resultOdd += x.toUpperCase()
+    }else{
+      resultOdd += x
+    }
+  })
+  result.push(resultEven)
+  result.push(resultOdd)
+  return result
+};
