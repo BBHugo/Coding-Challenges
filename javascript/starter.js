@@ -199,3 +199,15 @@ function animal(obj){
 var Ball = function(ballType) {
   this.ballType = ballType || 'regular';
 };
+
+//This one was a challenging one only because the setting of the i variable needed to be n. The goal is to add up every multiple of n up until m. So if n = 2 and m = 9, it'd be 2 + 4 + 6 + 8. I was originally trying to have i = 0 but it needed to be n then add n to every recurring one
+function sumMul(n,m){
+  if (n >= m) return "INVALID";
+
+var sum = 0;
+  for (var i = n; i < m; i+=n) {
+    sum += i;
+  }
+  return sum;
+}
+  //It's important to know for loops like this
