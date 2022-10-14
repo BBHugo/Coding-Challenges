@@ -211,3 +211,14 @@ var sum = 0;
   return sum;
 }
   //It's important to know for loops like this
+
+//For the below function, we remove duplicates from an array while keeping the same order
+function distinct(a) {
+  let result = []
+  a.forEach((x,i)=>{
+    if(a.indexOf(x) == i){
+      result.push(x)
+    }
+  })
+  return result
+}
