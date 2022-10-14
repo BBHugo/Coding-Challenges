@@ -222,3 +222,8 @@ function distinct(a) {
   })
   return result
 }
+  //This code can be dried up using "set"
+  function distinct(a) {
+    return [...new Set(a)];
+  }
+    //A Set is a colleciton of unique values and can only occur once in a set. Can hold any value of any data type.
