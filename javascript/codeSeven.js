@@ -224,3 +224,9 @@ function capitalize(s){
   result.push(resultOdd)
   return result
 };
+
+//The below adds the filter method which will create a new array based on the criteria which passes through the parameter
+function getEvenNumbers(numbersArray){ 
+  const result = numbersArray.filter( number => number % 2 === 0) //Have to assign the method to a variable, the "number" is of my own creation and I believe works the same as the forEach method of x,i. So it goes through each element and returns the ones that pass the test given in the arrow function within the parameter.
+  return result //Call the variable, although this could be added to the above line as well
+}
