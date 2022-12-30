@@ -230,3 +230,16 @@ function getEvenNumbers(numbersArray){
   const result = numbersArray.filter( number => number % 2 === 0) //Have to assign the method to a variable, the "number" is of my own creation and I believe works the same as the forEach method of x,i. So it goes through each element and returns the ones that pass the test given in the arrow function within the parameter.
   return result //Call the variable, although this could be added to the above line as well
 }
+
+//The below code will calculate a factorial, basically the product of a given value multiplied by every whole number preceding it. In the exercise, if the variable (n) is below 0 or above 12, we throw an error "RangeError"
+function factorial(n){
+  let sum = 1
+   if(n < 0 || n > 12){
+     throw "RangeError" //The difference between a throw and return, is a return is typically an acknowledgement of success where throw is an error or something didn't register
+   }else{
+     for(let i = 1; i <= n; i++){
+       sum *= i
+     }
+   }
+  return sum
+}
