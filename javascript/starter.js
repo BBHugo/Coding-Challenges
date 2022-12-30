@@ -38,7 +38,7 @@ function shortcut(string){
   }
 
 //A simple method to reverse a string. Note that this will be useful to check for palindromes.
-let solution = (str) => str.split("").reverse().join("")
+let solution = (str) => str.split("").reverse().join("") //A reminder that making them all lowercase (If we want non-case sensitivity) is VARIABLEHERE.toLowerCase()
 
 //An example of the reduce method used with ternary and arrow functions, if the array given is empty (numbers) then we will return 0
 let sum = numbers => numbers.length ? numbers.reduce((acc,c) => acc + c ) : 0
@@ -227,3 +227,17 @@ function distinct(a) {
     return [...new Set(a)];
   }
     //A Set is a colleciton of unique values and can only occur once in a set. Can hold any value of any data type.
+
+//The below function allows us to see if the string contains a certain key, we return the appropriate suit for the contained image using the .includes method
+function defineSuit(card) {
+  if(card.includes("♣")){
+     return "clubs"
+    }else if(card.includes("♦")){
+      return "diamonds"
+    }else if(card.includes("♥")){
+      return "hearts"
+    }else if(card.includes("♠")){
+      return "spades"
+    }
+}
+  //This was done before, and work with arrays as well.
