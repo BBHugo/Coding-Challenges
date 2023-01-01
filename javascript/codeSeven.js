@@ -243,3 +243,14 @@ function factorial(n){
    }
   return sum
 }
+
+//The code below allows us to remove any character that isnt a letter from the given parameter and then reverses the result
+function reverseLetter(str) {
+  let result = ''
+  str.split("").forEach((x,i) =>{
+    if(x == x.match(/[a-zA-Z]/ig)){
+      result += x
+    }
+  })
+  return result.split("").reverse().join("")
+}
