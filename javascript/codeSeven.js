@@ -256,3 +256,5 @@ function reverseLetter(str) {
 }
   //This one makes it alot dryer using only a single line. It uses the replace method to
   reverseLetter=(str)=>s.replace(/[^a-z]/gi,'').split('').reverse().join('')
+  //This one is even better, doesn't remove just matches using RegEx too
+  const reverseLetter = str => str.match(/[a-z]/g).reverse().join('');
