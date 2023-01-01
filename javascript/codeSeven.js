@@ -254,5 +254,5 @@ function reverseLetter(str) {
   })
   return result.split("").reverse().join("")
 }
-  //This one makes it alot dryer using only a single line
+  //This one makes it alot dryer using only a single line. It uses the replace method to
   reverseLetter=(str)=>s.replace(/[^a-z]/gi,'').split('').reverse().join('')
