@@ -254,3 +254,5 @@ function reverseLetter(str) {
   })
   return result.split("").reverse().join("")
 }
+  //This one makes it alot dryer using only a single line
+  reverseLetter=(str)=>s.replace(/[^a-z]/gi,'').split('').reverse().join('')
