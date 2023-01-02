@@ -241,3 +241,11 @@ function defineSuit(card) {
     }
 }
   //This was done before, and work with arrays as well.
+
+  //The code below is to remove any zeros at the end of the number using a "while loop". Self explanatory but make sure the n != 0 is there so it wont get stuck with zeros and forever loop itself.
+  function noBoringZeros(n){
+    while (n % 10 == 0 && n !=0){
+      n = n/10 //The n here gets reassigned with every loop, allowing us to return the result of the loop at the end.
+    }
+    return n //Returns the reassigned and completely looped n.
+  }
