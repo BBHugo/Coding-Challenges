@@ -109,7 +109,7 @@ function arithmetic(a,b, operator){
 //The below is used to sort an array of numbers from smallest to largest, if the array.length == 0 or is null then we return an empty array.
     //This one will be a longer version to help readability of what's happening.
 function sortArray(nums){
-    if(nums === null || nums.lenght === 0){
+    if(nums === null || nums.length === 0){
         return []
     }else{
         return nums.sort(function(a,b){return a-b})
