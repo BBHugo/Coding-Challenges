@@ -243,3 +243,8 @@ function factorial(n){
    }
   return sum
 }
+
+//The goal of the code below is to get the multiple placed arrays (within the singular parameter we are able to use) and add the minimum number of each together to get the reult. The originnal problem begins with how to separate the the arrays using the singular parameter to get indvidual "mins" to ultimately add up. We do this using the reduce method
+function sumOfMinimums(arr) {
+  return arr.reduce((p, c) => p + Math.min(...c), 0);
+} //The "..." within the reduce method's operation is a "rest operator" used to grab the different arrays within the single parameter of "arr" (This might be wrong but is my understanding)
