@@ -244,17 +244,7 @@ function factorial(n){
   return sum
 }
 
-//The code below allows us to remove any character that isnt a letter from the given parameter and then reverses the result
-function reverseLetter(str) {
-  let result = ''
-  str.split("").forEach((x,i) =>{
-    if(x == x.match(/[a-zA-Z]/ig)){
-      result += x
-    }
-  })
-  return result.split("").reverse().join("")
-}
-  //This one makes it alot dryer using only a single line. It uses the replace method to
-  reverseLetter=(str)=>s.replace(/[^a-z]/gi,'').split('').reverse().join('')
-  //This one is even better, doesn't remove just matches using RegEx too
-  const reverseLetter = str => str.match(/[a-z]/g).reverse().join('');
+//The goal of the code below is to get the multiple placed arrays (within the singular parameter we are able to use) and add the minimum number of each together to get the reult. The originnal problem begins with how to separate the the arrays using the singular parameter to get indvidual "mins" to ultimately add up. We do this using the reduce method
+function sumOfMinimums(arr) {
+  return arr.reduce((p, c) => p + Math.min(...c), 0);
+} //The "..." within the reduce method's operation is a "rest operator" used to grab the different arrays within the single parameter of "arr" (This might be wrong but is my understanding)
