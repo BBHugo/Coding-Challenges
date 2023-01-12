@@ -248,3 +248,5 @@ function factorial(n){
 function sumOfMinimums(arr) {
   return arr.reduce((p, c) => p + Math.min(...c), 0);
 } //The "..." within the reduce method's operation is a "rest operator" used to grab the different arrays within the single parameter of "arr" (This might be wrong but is my understanding)
+
+let TripleDotWebsite = href('https://blog.bitsrc.io/three-dots-in-javascript-7b46bc05d5c3')
