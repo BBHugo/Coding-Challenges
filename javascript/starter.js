@@ -249,3 +249,11 @@ function defineSuit(card) {
     }
     return n //Returns the reassigned and completely looped n.
   }
+
+  //The below code is basics for how to push new information into an array. In this example using the parameters we'll first be returning surface area in index 0, then volume in the second.
+  function getSize(width, height, depth){
+    let array = []
+    array.push((2*width*height)+(2*depth*width)+(2*depth*height))
+    array.push(width*height*depth)
+    return array
+  }
