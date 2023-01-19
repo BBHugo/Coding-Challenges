@@ -257,3 +257,9 @@ function defineSuit(card) {
     array.push(width*height*depth)
     return array
   }
+
+  //In the code below, we use the backtick template literal to return the number in the alphabet the parameter wants us to find. Using the written out alphabet as a string as the counter, and giving the result as the index of the chosen letter plus 1 to note it from the alphabet
+  function position(letter){
+    let alphabet = "abcdefghijklmnopqrstuvwxyz"
+    return `Position of alphabet: ${alphabet.indexOf(letter) + 1}`
+  }
