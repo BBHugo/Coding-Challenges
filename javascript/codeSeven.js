@@ -244,9 +244,20 @@ function factorial(n){
   return sum
 }
 
-//The goal of the code below is to get the multiple placed arrays (within the singular parameter we are able to use) and add the minimum number of each together to get the reult. The originnal problem begins with how to separate the the arrays using the singular parameter to get indvidual "mins" to ultimately add up. We do this using the reduce method
+//The goal of the code below is to get the multiple placed arrays (within the singular parameter we are able to use) and add the minimum number of each together to get the reult. The original problem begins with how to separate the the arrays using the singular parameter to get indvidual "mins" to ultimately add up. We do this using the reduce method
 function sumOfMinimums(arr) {
   return arr.reduce((p, c) => p + Math.min(...c), 0);
 } //The "..." within the reduce method's operation is a "rest operator" used to grab the different arrays within the single parameter of "arr" (This might be wrong but is my understanding)
 
 let TripleDotWebsite = href('https://blog.bitsrc.io/three-dots-in-javascript-7b46bc05d5c3')
+
+//This one's a bit difficult at first and uses the slice method to bring down our given string to a desired size. The goal is to get the first parameter within the given number (second param) and return it counting 3 dots at the end of the sentence, unless the given string length is below the given number
+function trim ( str, size ) {
+  if ( str.length <= size ) {
+    return str;
+  }
+  
+  const real = str.slice(0, size); //The first param in slice is what index to start at, the second is where to end.
+  
+  return `${real.length < 4 ? real : real.slice(0, -3)}...`; //By using a ternary, we're determining if the "real" string length is within the given number, if so we return real, and using the back ticks, add the ... at the end. If it isn't smaller, it slices the real variable again. The -3 basically says to end the sliced string counting backwards in index.
+}
