@@ -269,3 +269,16 @@ function rowWeights(array){
   
   return [t1, t2] //This way it'll keep them in an array.
 }
+  //The below does the same thing just in a worse way
+  function rowWeights(array){
+    let team1 = []
+    let team2 = []
+    array.forEach((x,i) => {
+      if(i % 2 == 0 || i == 0){
+        team1.push(x)
+      }else if(i % 2 != 0){
+        team2.push(x)
+      }
+    })
+    return [team1.reduce((acc,c) => acc + c, 0), team2.reduce((acc,c) => acc + c,0)]
+  }
