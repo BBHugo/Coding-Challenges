@@ -261,3 +261,11 @@ function trim ( str, size ) {
   
   return `${real.length < 4 ? real : real.slice(0, -3)}...`; //By using a ternary, we're determining if the "real" string length is within the given number, if so we return real, and using the back ticks, add the ... at the end. If it isn't smaller, it slices the real variable again. The -3 basically says to end the sliced string counting backwards in index.
 }
+
+//The code below creates 2 teams from the given parameter array. Teams are divided by the first being team 1 then second team 2 and so on. We return the "weight"(total) of the combined team1 and team2
+function rowWeights(array){
+  let t1 = array.filter((x, i)=>i%2==0).reduce((a,item)=>a+item,0); //Filter works by only including whatever the filter says, using x and i as the variable and index like in forEach.
+  let t2 = array.filter((x, i)=>i%2!=0).reduce((a,item)=>a+item,0);
+  
+  return [t1, t2] //This way it'll keep them in an array.
+}
