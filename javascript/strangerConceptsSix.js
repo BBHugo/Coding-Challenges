@@ -92,3 +92,16 @@ function domainName(url){
 };
 
   //What this does is ruse the replace to remove any of those by subsequently removing another thing if the url has it. Eventually returning the domain by splitting it at the first period and returning the first element of the split
+
+//The code below takes in an array as its parameter. The function will go through the array and return the index where all the added numbers to the left of that index equal all the added values of the right of that index.
+function findEvenIndex(arr)
+{
+  let left = 0;
+  let right = arr.reduce((s,n) => s + n, 0); //By having the right side be the complete summed value of the array we can start subtracting as we move down the array.
+  for (let i = 0; i < arr.length; i++) {
+    right -= arr[i]; //Every time the for loop, loops, we subtract a "left" value from the right side. It also removes the initial/targeted index value since we dont count that in our sum anyways.
+    if (left === right) return i; //Returning before we add the left side allows us to have the left of index 0 equal 0. This immediately stops the loop since we are using a return
+    left += arr[i]; //If the condition in the row above isn't met, we run this line, and repeat the loop with the new information.
+  }
+  return -1; //If we go through the entire loop and still both sides don't equal each other, we return -1. Remember that this only happens if the loop doesn't find something.
+}
