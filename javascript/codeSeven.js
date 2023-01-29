@@ -282,3 +282,21 @@ function rowWeights(array){
     })
     return [team1.reduce((acc,c) => acc + c, 0), team2.reduce((acc,c) => acc + c,0)]
   }
+
+//The code below is effective at creating multiple arrays within an array from a given parameter (in this case an array). each array should be 2 sides with a string comprising of the given parameter, except each new array within the overarching array should put one more word into the left side
+function partlist(arr) {
+  let result = []
+  for(var z = 0; z < arr.length - 1; z++){ //we use a for loop with the variable of z created to know how many times we should loop
+    let first = []
+    let second = []
+    arr.forEach((x,i) => {
+      if(i <= z){ //By having z as our controlling parameter for this loop too, we will be able to add the appropriate number of elements to the left side, and z gets added by 1 every time the loop goes around. Essentially, the for loop starts, then the forEach completes its loop within the for loop.
+        first.push(x)
+      }else{
+        second.push(x)
+      }
+    })
+    result.push([first.join(" "),second.join(" ")]) //at the end of each loop around, the result of the forEach gets pushed up before the first and second variables get reset ahead of the forEach when the for loop runs again.
+  }
+  return result
+}

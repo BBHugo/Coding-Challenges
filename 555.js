@@ -1,4 +1,4 @@
-//This code allows us to get the 13th letter in the alphabet (loops around) after an initial index and replace a string with the 13th. I use 2 variable to give me the original alphabet and the 13th to pull the index of both and return it for the replacement using RegEx to look through the given original input (the original function parameter not the replace parameter)
+//This code allows us to get the 13th letter in the alphabet (loops around) after an initial index and replace a string with the 13th. I use 2 variables to give me the original alphabet and the 13th to pull the index of both and return it for the replacement using RegEx to look through the given original input (the original function parameter not the replace parameter)
 function rot13(message){
     let alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' //Original alphabet
     let other = 'nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM' //13 letters following Alphabet
