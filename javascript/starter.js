@@ -263,3 +263,8 @@ function defineSuit(card) {
     let alphabet = "abcdefghijklmnopqrstuvwxyz"
     return `Position of alphabet: ${alphabet.indexOf(letter) + 1}`
   }
+
+  //It's time to shed the forEach for every result that requires us to go through an array. The code below adds the length of each individual word given to us in the string parameter and return in in an array. Using the map method we'll create a function within the parameter/scope to add the space and length to each one without using forEAch
+  function addLength(str){
+    return str.split(' ').map(function(v){return v+' '+v.length})
+  }
