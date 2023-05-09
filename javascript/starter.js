@@ -249,3 +249,22 @@ function defineSuit(card) {
     }
     return n //Returns the reassigned and completely looped n.
   }
+
+  //The below code is basics for how to push new information into an array. In this example using the parameters we'll first be returning surface area in index 0, then volume in the second.
+  function getSize(width, height, depth){
+    let array = []
+    array.push((2*width*height)+(2*depth*width)+(2*depth*height))
+    array.push(width*height*depth)
+    return array
+  }
+
+  //In the code below, we use the backtick template literal to return the number in the alphabet the parameter wants us to find. Using the written out alphabet as a string as the counter, and giving the result as the index of the chosen letter plus 1 to note it from the alphabet
+  function position(letter){
+    let alphabet = "abcdefghijklmnopqrstuvwxyz"
+    return `Position of alphabet: ${alphabet.indexOf(letter) + 1}`
+  }
+
+  //It's time to shed the forEach for every result that requires us to go through an array. The code below adds the length of each individual word given to us in the string parameter and return in in an array. Using the map method we'll create a function within the parameter/scope to add the space and length to each one without using forEAch
+  function addLength(str){
+    return str.split(' ').map(function(v){return v+' '+v.length})
+  }

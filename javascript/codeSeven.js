@@ -109,7 +109,7 @@ function arithmetic(a,b, operator){
 //The below is used to sort an array of numbers from smallest to largest, if the array.length == 0 or is null then we return an empty array.
     //This one will be a longer version to help readability of what's happening.
 function sortArray(nums){
-    if(nums === null || nums.lenght === 0){
+    if(nums === null || nums.length === 0){
         return []
     }else{
         return nums.sort(function(a,b){return a-b})
@@ -244,7 +244,59 @@ function factorial(n){
   return sum
 }
 
-//The goal of the code below is to get the multiple placed arrays (within the singular parameter we are able to use) and add the minimum number of each together to get the reult. The originnal problem begins with how to separate the the arrays using the singular parameter to get indvidual "mins" to ultimately add up. We do this using the reduce method
+//The goal of the code below is to get the multiple placed arrays (within the singular parameter we are able to use) and add the minimum number of each together to get the reult. The original problem begins with how to separate the the arrays using the singular parameter to get indvidual "mins" to ultimately add up. We do this using the reduce method
 function sumOfMinimums(arr) {
   return arr.reduce((p, c) => p + Math.min(...c), 0);
 } //The "..." within the reduce method's operation is a "rest operator" used to grab the different arrays within the single parameter of "arr" (This might be wrong but is my understanding)
+
+let TripleDotWebsite = href('https://blog.bitsrc.io/three-dots-in-javascript-7b46bc05d5c3')
+
+//This one's a bit difficult at first and uses the slice method to bring down our given string to a desired size. The goal is to get the first parameter within the given number (second param) and return it counting 3 dots at the end of the sentence, unless the given string length is below the given number
+function trim ( str, size ) {
+  if ( str.length <= size ) {
+    return str;
+  }
+  
+  const real = str.slice(0, size); //The first param in slice is what index to start at, the second is where to end.
+  
+  return `${real.length < 4 ? real : real.slice(0, -3)}...`; //By using a ternary, we're determining if the "real" string length is within the given number, if so we return real, and using the back ticks, add the ... at the end. If it isn't smaller, it slices the real variable again. The -3 basically says to end the sliced string counting backwards in index.
+}
+
+//The code below creates 2 teams from the given parameter array. Teams are divided by the first being team 1 then second team 2 and so on. We return the "weight"(total) of the combined team1 and team2
+function rowWeights(array){
+  let t1 = array.filter((x, i)=>i%2==0).reduce((a,item)=>a+item,0); //Filter works by only including whatever the filter says, using x and i as the variable and index like in forEach.
+  let t2 = array.filter((x, i)=>i%2!=0).reduce((a,item)=>a+item,0);
+  
+  return [t1, t2] //This way it'll keep them in an array.
+}
+  //The below does the same thing just in a worse way
+  function rowWeights(array){
+    let team1 = []
+    let team2 = []
+    array.forEach((x,i) => {
+      if(i % 2 == 0 || i == 0){
+        team1.push(x)
+      }else if(i % 2 != 0){
+        team2.push(x)
+      }
+    })
+    return [team1.reduce((acc,c) => acc + c, 0), team2.reduce((acc,c) => acc + c,0)]
+  }
+
+//The code below is effective at creating multiple arrays within an array from a given parameter (in this case an array). each array should be 2 sides with a string comprising of the given parameter, except each new array within the overarching array should put one more word into the left side
+function partlist(arr) {
+  let result = []
+  for(var z = 0; z < arr.length - 1; z++){ //we use a for loop with the variable of z created to know how many times we should loop
+    let first = []
+    let second = []
+    arr.forEach((x,i) => {
+      if(i <= z){ //By having z as our controlling parameter for this loop too, we will be able to add the appropriate number of elements to the left side, and z gets added by 1 every time the loop goes around. Essentially, the for loop starts, then the forEach completes its loop within the for loop.
+        first.push(x)
+      }else{
+        second.push(x)
+      }
+    })
+    result.push([first.join(" "),second.join(" ")]) //at the end of each loop around, the result of the forEach gets pushed up before the first and second variables get reset ahead of the forEach when the for loop runs again.
+  }
+  return result
+}
