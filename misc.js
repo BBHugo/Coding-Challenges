@@ -46,3 +46,17 @@ async function getPaid(){
     console.log(houseThreeWait)
 }
 getPaid()
+
+
+//THE CODE BELOW IS THE FETCH FUNCTION TO OBTAIN AN API
+
+fetch("YOUR URL HERE")
+  .then(res => res.json()) // parse response as JSON, the res is a parameter for whatever comes through, we're transformingn it to a json
+  .then(data => {
+    console.log(data)
+  })
+  .catch(err => {
+    console.log(`error ${err}`)
+  })
+
+    //A reminder that we can get the specific data from
