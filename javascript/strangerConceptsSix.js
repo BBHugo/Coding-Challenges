@@ -105,3 +105,16 @@ function findEvenIndex(arr)
   }
   return -1; //If we go through the entire loop and still both sides don't equal each other, we return -1. Remember that this only happens if the loop doesn't find something.
 }
+
+
+//The code below takes 2 different lists(arrays). List a gets subtracted anything that is in list b. So if list b contains the number 44, then any 44 in list a will get filtered out and returned only the elements that arent in list b
+function arrayDiff(a, b) {
+  let array = []
+  a.forEach((x) => {
+    if(!b.includes(x)){
+      array.push(x)
+    }
+  })
+  
+  return array
+}
