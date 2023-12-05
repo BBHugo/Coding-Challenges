@@ -118,3 +118,45 @@ function arrayDiff(a, b) {
   
   return array
 }
+
+//The Code below takes in a string and encodes any vowel into their appropriate number (1-5), then the decode function will do the opposite
+function encode(string) {
+  let result = ''
+  string.split('').forEach((x,i)=> {
+    if(x === 'u') {
+      result += '5'
+    }else if(x === 'a'){
+      result += '1'
+    }else if(x === 'e'){
+      result += '2'
+    }else if(x === 'i'){
+      result += '3'
+    }else if(x === 'o'){
+      result += '4'
+    }else{
+      result += x
+    }
+  })
+  
+  return result
+}
+
+function decode(string) {
+  let dResult = ''
+  string.split('').forEach((x)=> {
+    if(x === '1'){
+      dResult += 'a'
+    }else if(x === '2'){
+      dResult += 'e'
+    }else if(x === '3'){
+      dResult += 'i'
+    }else if(x === '4'){
+      dResult += 'o'
+    }else if(x === '5'){
+      dResult += 'u'
+    }else{
+      dResult += x
+    }
+  })
+  return dResult
+}
