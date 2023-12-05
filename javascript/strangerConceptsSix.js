@@ -160,3 +160,12 @@ function decode(string) {
   })
   return dResult
 }
+
+      //The code below is to make it drier using reg ex instead of the conditionals
+function encode(string){
+  return string.replace(/[aeiou]/g, function (x) { return '_aeiou'.indexOf(x) });
+}
+
+function decode(string){
+  return string.replace(/[1-5]/g, function (x) { return '_aeiou'.charAt(x) });
+}
