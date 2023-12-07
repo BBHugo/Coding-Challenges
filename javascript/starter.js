@@ -270,7 +270,7 @@ function defineSuit(card) {
   }
 
 
-  //The code below takes in 3 parameters of an array and 2 different values, the goal is to make a sentence using the available information
+//The code below takes in 3 parameters of an array and 2 different values, the goal is to make a sentence using the available information
   function sayHello( name, city, state ) {
     let nameStr = ''
     
@@ -285,3 +285,8 @@ function defineSuit(card) {
     
     return `Hello, ${nameStr}! Welcome to ${city}, ${state}!`
   }
+
+    //The code below takes the above and makes it drier by not requiring any conditionals or loops. We use the combine function to make the array into a single string with a space in between (' ')
+    function sayHello( name, city, state ) {
+      return `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`
+      }
