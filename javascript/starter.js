@@ -268,3 +268,20 @@ function defineSuit(card) {
   function addLength(str){
     return str.split(' ').map(function(v){return v+' '+v.length})
   }
+
+
+  //The code below takes in 3 parameters of an array and 2 different values, the goal is to make a sentence using the available information
+  function sayHello( name, city, state ) {
+    let nameStr = ''
+    
+    name.forEach((x,i)=>{
+      if(i === name.length - 1){
+        nameStr += x
+      }else{
+        nameStr += x + ' '
+      }
+    })
+    
+    
+    return `Hello, ${nameStr}! Welcome to ${city}, ${state}!`
+  }
