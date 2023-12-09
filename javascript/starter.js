@@ -315,3 +315,7 @@ function array(string) {
       return result
     }
   }
+  //The code below is an extremely dry version of the above
+  function array(arr){
+    return arr.split(",").slice(1,-1).join(" ") || null;
+  }
