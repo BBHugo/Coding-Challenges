@@ -300,3 +300,14 @@ function partlist(arr) {
   }
   return result
 }
+
+// The code below takes a string, and returns an array with the elements being the location of the vowels within that string including Y and capital letters
+function vowelIndices(word){
+  let result = []
+  word.split('').forEach((x,i) => {
+    if(x.match(/[aeiouyAEIOUY]/ig)){
+      result.push(i + 1)
+    }
+  })
+  return result
+}

@@ -315,7 +315,7 @@ function array(string) {
       return result
     }
   }
-  //The code below is an extremely dry version of the above
+  //The code below is an extremely dry version of the above. It'll return null if the main thing doesn't work for whatever reason
   function array(arr){
     return arr.split(",").slice(1,-1).join(" ") || null;
   }
