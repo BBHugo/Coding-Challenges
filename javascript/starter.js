@@ -319,3 +319,14 @@ function array(string) {
   function array(arr){
     return arr.split(",").slice(1,-1).join(" ") || null;
   }
+
+  //The code below allows for the turning of a string into an array, removing any "!" in it and returning it with a "!" at the end.
+  function remove (string) {
+    let result = []
+    string.split('').forEach((x,i) => {
+      if(x !==  "!"){
+        result.push(x)
+      }
+    })
+    return result.join('') + "!"
+  }
