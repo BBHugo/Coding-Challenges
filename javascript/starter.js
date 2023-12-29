@@ -330,3 +330,8 @@ function array(string) {
     })
     return result.join('') + "!"
   }
+
+    //Refactoring to a dryer solution using reg ex and replace method
+    function remove(s){
+      return s.replace(/!/g, '') + "!"
+    }
