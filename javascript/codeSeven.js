@@ -311,3 +311,18 @@ function vowelIndices(word){
   })
   return result
 }
+
+//The code below tests to see if a value from the array is a string, if it is it converts into a number and groups all the new numbers to subtract it from all the added values that were already numbers
+function divCon(x){
+  let numbers = 0
+  let strings = 0
+  x.forEach((l) => {
+    if(l.toString() === l){
+      strings += Number(l)
+    }else{
+      numbers += l
+    }
+  })
+  
+  return numbers - strings
+}
