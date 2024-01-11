@@ -326,3 +326,8 @@ function divCon(x){
   
   return numbers - strings
 }
+
+  //The code below makes it drier using the typeof method
+  function divCon(x){
+    return x.reduce((acc, cur) => typeof cur === 'number'? acc + cur : acc - Number(cur),0)
+  }
