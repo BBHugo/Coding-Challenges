@@ -348,3 +348,5 @@ function whoIsPaying(name){
   }
   return result
 }
+  //The code below makes it alot more dry using ternary and the slice, which will return from the first index parameter 0, to the second chosen parameter index 2
+  const whoIsPaying = name => name.length > 2 ? [name, name.slice(0,2)] : [name] //Ternary works by declaring a function, following it with an arrow and having the conditional after that, the '?' will return the result if true, and after the ':' will return if false
