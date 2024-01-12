@@ -335,3 +335,16 @@ function array(string) {
     function remove(s){
       return s.replace(/!/g, '') + "!"
     }
+
+
+//The code below will take a name and return the name as well as the abbreviated to the first 2 letters name, if the name already only has 2 letters or less then it only returns that
+function whoIsPaying(name){
+  let result = []
+  if(name.length <= 2){
+    result.push(name)
+  }else{
+    result.push(name)
+    result.push(name.split('').filter((x,i)=> i < 2).join(''))
+  }
+  return result
+}
